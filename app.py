@@ -21,7 +21,7 @@ def predict():
     iput = [int(x) for x in request.form.values()]
     X_test = [np.array(iput)]
     pred = model.predict(X_test)
-    return render_template('index.html',out_put="Employee Salary will be Rs. {}".format(pred[0]))
+    return render_template('index.html',out_put="Employee Salary will be Rs. {}".format(round(pred[0],2)))
 
 
 
